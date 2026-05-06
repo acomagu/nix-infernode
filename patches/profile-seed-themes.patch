@@ -1,0 +1,13 @@
+diff --git a/resources/lib/sh/profile b/resources/lib/sh/profile
+index 0da6064..f7889bf 100644
+--- a/resources/lib/sh/profile
++++ b/resources/lib/sh/profile
+@@ -35,6 +35,8 @@ if {~ $emuhost MacOSX Linux}{
+ 		# Seed writable defaults from the emu root
+ 		cp /lib/ndb/llm $infhome/lib/ndb/llm >[2] /dev/null
+ 		cp /lib/lucifer/theme/current $infhome/lib/lucifer/theme/current >[2] /dev/null
++		cp /lib/lucifer/theme/brimstone $infhome/lib/lucifer/theme/brimstone >[2] /dev/null
++		cp /lib/lucifer/theme/halo $infhome/lib/lucifer/theme/halo >[2] /dev/null
+ 		cp /lib/veltro/meta.txt $infhome/lib/veltro/meta.txt >[2] /dev/null
+ 		cp /lib/veltro/agents/task.txt $infhome/lib/veltro-agents/task.txt >[2] /dev/null
+ 	}

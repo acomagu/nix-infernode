@@ -1,0 +1,14 @@
+diff --git a/resources/lib/lucifer/boot.sh b/resources/lib/lucifer/boot.sh
+index 7b01842..31bf302 100644
+--- a/resources/lib/lucifer/boot.sh
++++ b/resources/lib/lucifer/boot.sh
+@@ -45,7 +45,9 @@ luciuisrv
+ echo activity create Main > /n/ui/ctl
+ sleep 1
+-/dis/veltro/tools9p -v -m /tool -b read,list,find,search,grep,write,edit,exec,launch,spawn,diff,json,webfetch,git,say,editor,fractal,memory,todo,plan,websearch,mail,keyring,present,gap -p /dis/wm read list find present say hear task memory gap keyring editor shell
++mkdir -p /tmp/tool >[2] /dev/null
++/dis/veltro/tools9p -v -m /tmp/tool -b read,list,find,search,grep,write,edit,exec,launch,spawn,diff,json,webfetch,git,say,editor,fractal,memory,todo,plan,websearch,mail,keyring,present,gap -p /dis/wm read list find present say hear task memory gap keyring editor shell
++bind -bc /tmp/tool /tool >[2] /dev/null
+ lucibridge -a 0 -v -s >[2] /tmp/lucibridge.log &
+ sleep 1
+ echo 'create id=tasks type=taskboard label=Tasks' > /n/ui/activity/0/presentation/ctl
